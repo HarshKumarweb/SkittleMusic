@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Skittle MUSIC BOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Default background color for light mode */
+            color: #333; /* Default text color for light mode */
+        }
 
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333; /* Background color for dark mode */
+            color: #f0f0f0; /* Text color for dark mode */
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            height: 100vh;
+        }
+
+        .btn {
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #222;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Dark mode button styling */
+        .dark-mode-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #222;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Add styling for the new paragraph */
+        .paragraph {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        /* Add styling for the "Contact Us" button */
+        .contact-us-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-us-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Popup menu styles */
+        .popup {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px 20px;
+            display: none;
+        }
+
+        .popup:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Add Skittle MUSIC BOT</h1>
+    </header>
+    <div class="container">
+        <a href="https://discord.com/oauth2/authorize?client_id=1160592036802600960&permissions=40654049942336&scope=bot" class="btn" target="_blank" onclick="showMessage()">Add BOT</a>
+        <h2 id="thanks-message" style="display: none">Thanks for adding Skittle Music BOT!</h2>
+        <p class="paragraph">Skittle music is a BOT that provides high-quality music at your server. Add now!</p>
+        <a href="https://contact-us-here.netlify.app/" class="contact-us-btn">Contact Us</a>
+        <div class="popup" onclick="showMessage()">Popup Menu</div>
+    </div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                darkModeToggle.textContent = "Toggle Dark Mode";
+            } else {
+                body.classList.add("dark-mode");
+                darkModeToggle.textContent = "Toggle Light Mode";
+            }
+        }
+
+        // Function to show the "Thanks for adding Skittle Music BOT" message
+        function showMessage() {
+            document.getElementById("thanks-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
